@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using jQuery.Hero.Models;
 
 namespace jQuery.Hero.Controllers
 {
@@ -13,7 +14,22 @@ namespace jQuery.Hero.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var stocksTable = new StockTable
+                                  {
+                                      Stocks = new List<Stocks>
+                                                  {
+                                                     new Stocks{ Code = "STB", Price = 1000000.00}
+                                                  }
+                                  };
+
+            for (int i = 0; i < 100; i++)
+            {
+                stocksTable.Stocks.Add(new Stocks { Code = "Name" + i , Price = i });
+            }
+            
+
+
+            return View(stocksTable);
         }
 
     }

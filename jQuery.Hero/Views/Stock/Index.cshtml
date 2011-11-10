@@ -1,4 +1,5 @@
-﻿@model dynamic
+﻿@using MvcContrib.UI.Grid
+@model StockTable
 
 @{
     ViewBag.Title = "Stock Table";
@@ -7,3 +8,8 @@
 
 <h2>Stock Table</h2>
 
+@Html.Grid(Model.Stocks).Columns(column =>
+                                           {
+                                               column.For(stock => stock.Code);
+                                               column.For(stock => stock.Price);
+                                           })
