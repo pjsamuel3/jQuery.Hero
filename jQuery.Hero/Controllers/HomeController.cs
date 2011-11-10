@@ -22,7 +22,16 @@ namespace jQuery.Hero.Controllers
 
         public JsonResult GiveMeSomeJson()
         {
-            return new JsonResult();
+            var json = new
+                           {
+                               person = new
+                                            {
+                                                Name = "Pete",
+                                                Dob = new DateTime(1983, 1, 1)
+                                            }
+                           };
+
+            return Json(json, JsonRequestBehavior.AllowGet);
         }
     }
 }
