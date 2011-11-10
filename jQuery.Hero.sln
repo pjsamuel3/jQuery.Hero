@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jQuery.Hero", "jQuery.Hero\jQuery.Hero.csproj", "{B7112E15-CBDB-435D-9B3E-826A0BB4677D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jQuery.Hero.Tests", "jQuery.Hero.Tests\jQuery.Hero.Tests.csproj", "{00E92788-1D37-4E41-BEB7-36631C06F6B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7112E15-CBDB-435D-9B3E-826A0BB4677D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7112E15-CBDB-435D-9B3E-826A0BB4677D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7112E15-CBDB-435D-9B3E-826A0BB4677D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7112E15-CBDB-435D-9B3E-826A0BB4677D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E92788-1D37-4E41-BEB7-36631C06F6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E92788-1D37-4E41-BEB7-36631C06F6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E92788-1D37-4E41-BEB7-36631C06F6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E92788-1D37-4E41-BEB7-36631C06F6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
