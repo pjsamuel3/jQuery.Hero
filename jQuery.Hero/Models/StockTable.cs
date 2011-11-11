@@ -2,7 +2,7 @@
 
 namespace jQuery.Hero.Models
 {
-    public class StockTable
+    public class StocksTable
     {
         public List<Stocks> Stocks { get; set; }
     }

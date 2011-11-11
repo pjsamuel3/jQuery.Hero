@@ -275,6 +275,30 @@ div#title {
     text-decoration: none;
 }
 
+.pop-over
+{
+      cursor: pointer;
+      float: left;
+}
+
+.pop-over:hover
+{
+    opacity: 0.8;
+    background-color: grey;
+}
+
+.pop-over-content
+{
+      display: none;
+	background: none repeat scroll 0 0 white;
+	border: 3px solid black;
+	position: absolute;
+	padding: 7px;
+	border-radius: 4px 4px 4px 4px;
+      -webkit-border-radius: 4px 4px 4px 4px;
+      -moz-border-radius: 4px 4px 4px 4px;
+}
+
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 .field-validation-error {

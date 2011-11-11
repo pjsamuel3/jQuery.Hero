@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using jQuery.Hero.Models;
 
 namespace jQuery.Hero.Controllers
 {
@@ -32,6 +33,14 @@ namespace jQuery.Hero.Controllers
                            };
 
             return Json(json, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Echo(string id)
+        {
+            return View(new Echo
+                                    {
+                                        Input = id
+                                    });
         }
     }
 }

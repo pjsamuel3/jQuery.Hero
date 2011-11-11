@@ -7,14 +7,14 @@ using jQuery.Hero.Models;
 
 namespace jQuery.Hero.Controllers
 {
-    public class StockController : Controller
+    public class StocksController : Controller
     {
         //
         // GET: /Stock/
 
         public ActionResult Index()
         {
-            var stocksTable = new StockTable
+            var stocksTable = new StocksTable
                                   {
                                       Stocks = new List<Stocks>
                                                   {
@@ -22,7 +22,7 @@ namespace jQuery.Hero.Controllers
                                                   }
                                   };
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 20; i++)
             {
                 stocksTable.Stocks.Add(new Stocks { Code = "Name" + i , Price = i });
             }

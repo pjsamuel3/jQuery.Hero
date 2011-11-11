@@ -1,0 +1,28 @@
+﻿@using MvcContrib.UI.Grid
+@model StocksTable
+
+@{
+    ViewBag.Title = "Stock Table";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Stock Table</h2>
+
+<div id="context_menu" class="pop-over-content">
+    Here is some extra info
+</div>
+
+@Html.Grid(Model.Stocks).Columns(column =>
+                                               {
+                                                   column.For(stock => stock.Code);
+                                                   column.For(stock => stock.Price);
+                                               })
+
+<script type="text/javascript">
+      var demo = {};
+
+      demo.popOver = function() {
+
+            $("tr").popOver({ target: "context_menu", url: "/Home/Echo/Ice Cream" }).show();
+      };
+</script>
