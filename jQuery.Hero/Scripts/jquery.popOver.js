@@ -1,8 +1,6 @@
 /**
 * jQuery popOver Plugin 1.0
 *
-* http://docs.jquery.com/Plugins/Validation
-* 
 * Peter Samuel
 * http://www.iteraconsulting.no
 *
