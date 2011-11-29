@@ -24,18 +24,20 @@
                   return this.each(function () {
 
                         var $this = $(this),
-                            data = $this.find(".pop-over").data('popOver'),
+                            data = $this.data('popOver'),
                             target = $("#" + settings.target);
 
                         if (!data) {
 
                               $this.prepend('<div class="pop-over ui-icon ui-icon-triangle-1-s"></div>');
-                              var icon = $this.find(".pop-over").bind('click', popOver.show);
+                              var icon = $this.find(".pop-over").first().bind('click', popOver.show);
                               target.mouseleave(popOver.hide);
 
                               icon.data('popOver', {
                                     trigger: $this,
-                                    target: target
+                                    target: target,
+                                    url: settings.url,
+                                    data: settings.data
                               });
                         }
                   });
@@ -44,8 +46,9 @@
                   var $this = $(this),
                         $data = $this.data('popOver');
 
-                  if (settings.url) {
-                        popOver.get();
+                  if ($data.url) {
+                        settings.target = $data.target;
+                        popOver.get($data.url, $data.data);
                   }
 
                   var offset = $this.offset();
@@ -56,17 +59,20 @@
                   var $this = $(this);
                   $this.hide();
             },
-            get: function () {
-                  $.get(settings.url, settings.data, function (data) {
-                        popOver.callback(data);
+            get: function (url, data) {
+                  $.get(url, data, function (response) {
+                        popOver.callback(response);
                   });
+
             },
             callback: function (response) {
-                  $("#" + settings.target).html(response);
+                  settings.target.html(response);
             }
       };
 
       $.fn.popOver = function (method) {
+
+
             // Method calling logic
             if (popOver[method]) {
                   return popOver[method].apply(this, Array.prototype.slice.call(arguments, 1));
